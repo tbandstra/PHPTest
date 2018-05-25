@@ -5,7 +5,7 @@ namespace Test;
 use Converter\NumberConverter;
 use PHPUnit\Framework\TestCase;
 
-class NumberConverterTestNl extends TestCase
+class NlNumberConverterTest extends TestCase
 {
     private $converter;
     private $locale = 'nl_NL';
