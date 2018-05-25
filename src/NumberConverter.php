@@ -7,20 +7,20 @@ use NumberFormatter;
 class NumberConverter
 {
     private $locale;
-    private $value;
+    private $words;
     private $number;
     private $converter;
 
-    public function __construct(string $number, string $locale = 'en_EN')
+    public function __construct(string $words, string $locale = 'en_EN')
     {
-        $this->value = $number;
+        $this->words = $words;
         $this->locale = $locale;
         if ($locale == 'en_EN')
             $this->converter = new ConverterEn();
         else
             $this->converter = new ConverterNl();
         $this->converter->setProperties();
-        $this->number = $this->converter->wordsToNumbers($this->value);
+        $this->number = $this->converter->wordsToNumber($this->words);
     }
 
     public function toInt()
