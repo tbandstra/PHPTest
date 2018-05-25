@@ -5,7 +5,7 @@ namespace Test;
 use Converter\NumberConverter;
 use PHPUnit\Framework\TestCase;
 
-class NumberConverterTest extends TestCase
+class NumberConverterTestEn extends TestCase
 {
     private $converter;
 
